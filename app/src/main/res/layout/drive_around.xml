@@ -1,103 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".uiclasses.driveAround">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_8sdp"
-            android:text="DriveAround"
-            android:textAlignment="center"
-            android:textSize="@dimen/_14ssp"
-            android:textStyle="bold" />
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:text="Name:"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textAlignment="textEnd"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Remind To All" />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:id="@+id/spinnerExample"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI1"
-            android:text="Remind To POI 1" />
+    </LinearLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI2"
-            android:text="Remind To POI 2" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI3"
-            android:text="Remind To POI 3" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI4"
-            android:text="Remind To POI 4" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI5"
-            android:text="Remind To POI 5" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI6"
-            android:text="Remind To POI 6" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI7"
-            android:text="Remind To POI 7" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPOI7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_8sdp"
-            android:onClick="POI8"
-            android:text="Remind To POI 8" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</ScrollView>
+</LinearLayout>

@@ -50,6 +50,11 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
 
+    //noinspection GradleCompatible
+    implementation "com.android.support:cardview-v7:28.0.0"
+
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+
     //room database
     implementation 'androidx.room:room-runtime:2.4.1'
     annotationProcessor 'androidx.room:room-compiler:2.4.1'

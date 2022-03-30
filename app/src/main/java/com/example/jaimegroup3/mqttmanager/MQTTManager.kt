@@ -7,7 +7,6 @@ import org.eclipse.paho.android.service.MqttAndroidClient
 import org.eclipse.paho.client.mqttv3.*
 import java.util.*
 
-
 class MQTTManager(val connectionParams: MQTTConnectionParams, val context: Context, val uiUpdater: UIUpdaterInterface?) {
 
     private var client = MqttAndroidClient(context,connectionParams.host,connectionParams.clientId + id(context))

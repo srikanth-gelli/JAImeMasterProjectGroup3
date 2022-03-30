@@ -1,9 +1,11 @@
 package com.example.jaimegroup3.mqttmanager
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jaimegroup3.UIUpdaterInterface
+import com.example.jaimegroup3.database.dao.EventMasterDao
 
 open class Moving : AppCompatActivity(), UIUpdaterInterface {
 
@@ -40,6 +42,7 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
 
         // Enable send button and message textfield only after connection
         resetUIWithConnection(false)
+        Log.i("success", "connected")
     }
 
     var hostname = "broker.mqttdashboard.com"
@@ -50,7 +53,8 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
     var chargingTopic = "zbos/slam/charging/goto" //charging station
 
     fun connect(view: View) {
-        var connectionParams = MQTTConnectionParams("MQTTSample", host, chargingTopic, "", "")
+
+        var connectionParams = MQTTConnectionParams("MQTTSample", host, "", "", "")
         mqttManager = MQTTManager(connectionParams, applicationContext, this)
         mqttManager?.connect()
     }
@@ -62,6 +66,7 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
 
     fun POI1(view: View) {
         mqttManager?.subscribe(poiTopic)
+        Log.i("success", "subscribed to "+poiTopic)
         mqttManager?.publish(
             "{\n" +
                     "\"mapName\": \"Master Project\",\n" +
@@ -150,6 +155,7 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
 
     fun chargingStation(view: View) {
         mqttManager?.subscribe(chargingTopic)
+        Log.i("success", "subscribed to "+chargingTopic)
         mqttManager?.publish(
             "{\n" +
                     "\"mapName\": \"Master Project\",\n" +

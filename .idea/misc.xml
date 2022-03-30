@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/bottom_sheet_add_event.xml" value="0.16" />
         <entry key="app/src/main/res/layout/calender_entry.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.14708333333333334" />
+        <entry key="app/src/main/res/layout/custom_spinner_adapter.xml" value="0.125" />
         <entry key="app/src/main/res/layout/drive_around.xml" value="0.18" />
         <entry key="app/src/main/res/layout/welcome_page.xml" value="0.1" />
       </map>

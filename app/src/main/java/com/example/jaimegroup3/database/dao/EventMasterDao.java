@@ -26,6 +26,6 @@ public interface EventMasterDao {
     List<EventModel> getAllEvent();
 
     @Update
-    void updateCartItem(EventModel eventModel);
+    void updateEvent(EventModel eventModel);
 
 }

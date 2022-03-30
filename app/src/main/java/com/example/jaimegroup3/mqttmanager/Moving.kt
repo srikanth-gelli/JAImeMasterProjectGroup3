@@ -1,10 +1,8 @@
 package com.example.jaimegroup3.mqttmanager
 
-import android.content.ClipData
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jaimegroup3.R
 import com.example.jaimegroup3.UIUpdaterInterface
 
 open class Moving : AppCompatActivity(), UIUpdaterInterface {
@@ -12,6 +10,7 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
     var mqttManager: MQTTManager? = null
 
     override fun resetUIWithConnection(status: Boolean) {
+
         // ipAddressField.isEnabled  = !status
         // topicField.isEnabled      = !status
         // messageField.isEnabled    = status
@@ -19,6 +18,7 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
         //sendBtn.isEnabled = status
         //POI_1.isEnabled = status
         // Update the status label.
+
         if (status) {
             updateStatusViewWith("Connected")
         } else {
@@ -157,6 +157,15 @@ open class Moving : AppCompatActivity(), UIUpdaterInterface {
                     "\"speed\": 50\n" +
                     "}"
         )
+    }
+
+    fun remindsAllCalenderEntry(view: View){
+
+
+    }
+
+    fun remindsCalenderEntry(view: View){
+
     }
 
 }
